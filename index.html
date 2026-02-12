@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JayboVisual</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Inline slide styling for dynamic background images -->
+    <style>
+        /* Inline defaults for project slide thumbnails */
+        .project-slide {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <!-- Site navigation -->
+    <nav class="site-nav">
+        <div class="site-logo">JayboVisual</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">Who am I</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main page content -->
+    <main>
+        <!-- Hero introduction -->
+        <section class="hero" id="home">
+            <!-- Hero video background -->
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="Images/Hero-Vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Hero copy overlay -->
+            <div class="hero-content">
+                <p>Visual designer bringing ideas and thoughts to life.
+                    <span style="font-style: italic;"><strong>Columbia S.C</strong></span>
+                    <br>
+                    -----------------------------------
+                    <br>
+                                        <span style="font-style: italic;">Scroll down to see more.
+</span>
+
+                </p>
+            </div>
+        </section>
+
+        <!-- Featured project carousel -->
+        <section class="featured-projects" id="projects">
+            <h2>Favorite Projects</h2>
+            <!-- Carousel controls + viewport -->
+            <div class="project-carousel">
+                <button class="carousel-btn carousel-btn--prev">❮</button>
+                <div class="project-carousel__viewport">
+                    <a href="#" target="_blank" class="project-slide" data-index="0" data-title="Ad Council: The Law of the Land" aria-label="Ad Council project thumbnail"></a>
+                    <a href="#" target="_blank" class="project-slide" data-index="1" data-title="Crown Stamp Series" aria-label="Crown Stamp Series project thumbnail"></a>
+                    <a href="#" target="_blank" class="project-slide" data-index="2" data-title="Avalon Suites" aria-label="Avalon Suites project thumbnail"></a>
+                    <a href="#" target="_blank" class="project-slide" data-index="3" data-title="Fantastic 4 Fest" aria-label="Fantastic 4 Fest project thumbnail"></a>
+                    <a href="#" target="_blank" class="project-slide project-slide--solid" data-index="4" data-title="See more" aria-label="See more projects"></a>
+                </div>
+                <button class="carousel-btn carousel-btn--next">❯</button>
+            </div>
+            <!-- Carousel pagination dots -->
+            <div class="carousel-dots">
+                <button class="carousel-dot active" data-index="0"></button>
+                <button class="carousel-dot" data-index="1"></button>
+                <button class="carousel-dot" data-index="2"></button>
+                <button class="carousel-dot" data-index="3"></button>
+                <button class="carousel-dot" data-index="4"></button>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section class="about-section" id="about">
+            <!-- About layout: text + portrait -->
+            <div class="about-layout">
+                <div class="about-text">
+                    <h2>Hello My name is <strong> Jaden Poe</strong></h2>
+                    <p>I’m a design student and photographer with a strong interest in visual storytelling, UI/UX, and art-driven experiences. 
+                        My work explores the balance between structure and experimentation, combining my research, systems thinking, and creative intuition. With a background in athletics and photography, I bring a disciplined, detail-oriented approach to design while still being connected to the less structured part of art. 
+                        I’m constantly learning and refining my craft, building work that feels intentional and creative.</p>
+                </div>
+                <div class="about-image">
+                    <img src="Images/jayboimage.jpg" alt="Portrait of Jaden Poe">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section class="contact-section" id="contact">
+            <h2>Contact</h2>
+            <p><strong>Got a Project!</strong> Reach out to me with any inquiries or collaboration opportunities.</p>
+            <!-- Contact card with email + social links -->
+            <div class="contact-card">
+                <p class="contact-note">Email me or DM me directly to get in touch.</p>
+                <a class="contact-email" href="mailto:jaybovisual@email.com">jaybovisual@email.com</a>
+                <div class="contact-links">
+                    <a href="https://www.instagram.com/jaybo_visual/" target="_blank">Instagram</a>
+                    <a href="https://www.linkedin.com/in/jadenpoe" target="_blank">LinkedIn</a>
+                    <a href="https://www.behance.net/jadenpoe" target="_blank">Behance</a>
+                    <a href="https://dribbble.com/jaden-poe/shots" target="_blank">Dribbble</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Site footer -->
+    <footer>
+        <p>&copy; 2026 JayboVisual. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+
+
+
+    <!-- Carousel behavior + project metadata -->
+    <script>
+        // Project thumbnail configuration.
+        const projectData = [
+            {
+                title: 'Ad Council: The Law of the Land (Fall 2025)',
+                image: 'Images/Ad-council-thumnbail.png',
+                link: 'https://www.behance.net/gallery/240217651/Ad-Council-The-Law-of-the-Land'
+            },
+            {
+                title: 'Crown Stamp Series (Fall 2024)',
+                image: 'Images/Stamp-project.jpg',
+                link: 'https://www.behance.net/gallery/216011991/CROWN-Stamp-Series'
+            },
+            {
+                title: 'Avalon Suites (Spring 2025)',
+                image: 'Images/avalon-store-front.jpg',
+                link: 'https://www.behance.net/gallery/240218811/Avalon-Suites'
+            },
+            {
+                title: 'Fantastic 4 Fest (Fall 2025)',
+                image: 'Images/f4-banner-mockup.jpg',
+                link: 'https://www.behance.net/gallery/240238089/Fantastic-4-Fest'
+            },
+            {
+                title: 'Click here to see more',
+                link: 'https://www.behance.net/jadenpoe',
+                solidColor: 'var(--malachite)'
+            }
+        ];
+
+        // Carousel state + elements.
+        let currentIndex = 0;
+        const cards = document.querySelectorAll('.project-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const prevBtn = document.querySelector('.carousel-btn--prev');
+        const nextBtn = document.querySelector('.carousel-btn--next');
+
+        // Inject links and backgrounds from the config.
+        function applyProjectData() {
+            cards.forEach((card, index) => {
+                const data = projectData[index];
+                if (!data) {
+                    return;
+                }
+
+                card.href = data.link;
+                card.setAttribute('data-title', data.title || 'View project');
+                card.setAttribute('title', data.title || 'View project');
+
+                if (data.solidColor) {
+                    card.classList.add('project-slide--solid');
+                    card.style.backgroundColor = data.solidColor;
+                    card.style.backgroundImage = 'none';
+                } else {
+                    card.classList.remove('project-slide--solid');
+                    card.style.backgroundColor = '';
+                    card.style.backgroundImage = `url('${data.image}')`;
+                }
+            });
+        }
+
+        // Toggle the visible slide and matching dot.
+        function showCard(index) {
+            cards.forEach((card, i) => {
+                card.classList.remove('active');
+                dots[i].classList.remove('active');
+            });
+            cards[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        // Previous slide button.
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            showCard(currentIndex);
+        });
+
+        // Next slide button.
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            currentIndex = (currentIndex + 1) % cards.length;
+            showCard(currentIndex);
+        });
+
+        // Jump to a slide via dots.
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.getAttribute('data-index'));
+                showCard(currentIndex);
+            });
+        });
+
+        // Initial render.
+        applyProjectData();
+        showCard(0);
+    </script>
+</body>
+</html>
